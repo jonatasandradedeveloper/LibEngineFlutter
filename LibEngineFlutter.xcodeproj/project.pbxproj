@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F31FB0CB4305895D489C800 /* Pods_LibEngineFlutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E3385D0AA0D3B92C14966 /* Pods_LibEngineFlutter.framework */; };
 		E7B4719726CD9A8700B652C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4719626CD9A8700B652C3 /* AppDelegate.swift */; };
 		E7B4719926CD9A8700B652C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4719826CD9A8700B652C3 /* SceneDelegate.swift */; };
 		E7B4719B26CD9A8700B652C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4719A26CD9A8700B652C3 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D4926997FF7D72587E580CB /* Pods-LibEngineFlutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibEngineFlutter.release.xcconfig"; path = "Target Support Files/Pods-LibEngineFlutter/Pods-LibEngineFlutter.release.xcconfig"; sourceTree = "<group>"; };
+		996E3385D0AA0D3B92C14966 /* Pods_LibEngineFlutter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibEngineFlutter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24AEEDA526332A1CC368655 /* Pods-LibEngineFlutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibEngineFlutter.debug.xcconfig"; path = "Target Support Files/Pods-LibEngineFlutter/Pods-LibEngineFlutter.debug.xcconfig"; sourceTree = "<group>"; };
 		E7B4719326CD9A8700B652C3 /* LibEngineFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibEngineFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4719626CD9A8700B652C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7B4719826CD9A8700B652C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F31FB0CB4305895D489C800 /* Pods_LibEngineFlutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F202E1D6C491F9A8E0818DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				996E3385D0AA0D3B92C14966 /* Pods_LibEngineFlutter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4CD0A19CC92DAB02078A32C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A24AEEDA526332A1CC368655 /* Pods-LibEngineFlutter.debug.xcconfig */,
+				5D4926997FF7D72587E580CB /* Pods-LibEngineFlutter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E7B4718A26CD9A8700B652C3 = {
 			isa = PBXGroup;
 			children = (
 				E7B4719526CD9A8700B652C3 /* LibEngineFlutter */,
 				E7B4719426CD9A8700B652C3 /* Products */,
+				B4CD0A19CC92DAB02078A32C /* Pods */,
+				3F202E1D6C491F9A8E0818DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7B471A726CD9A8A00B652C3 /* Build configuration list for PBXNativeTarget "LibEngineFlutter" */;
 			buildPhases = (
+				F48E5D78CB64B6228D5D5B73 /* [CP] Check Pods Manifest.lock */,
+				9721112C46FD6796005507DB /* [CP-User] Run Flutter Build myflutter Script */,
 				E7B4718F26CD9A8700B652C3 /* Sources */,
 				E7B4719026CD9A8700B652C3 /* Frameworks */,
 				E7B4719126CD9A8700B652C3 /* Resources */,
+				ECB3C2EC511BE32A19E99F6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,58 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9721112C46FD6796005507DB /* [CP-User] Run Flutter Build myflutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build myflutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../myflutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		ECB3C2EC511BE32A19E99F6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibEngineFlutter/Pods-LibEngineFlutter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibEngineFlutter/Pods-LibEngineFlutter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibEngineFlutter/Pods-LibEngineFlutter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F48E5D78CB64B6228D5D5B73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibEngineFlutter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7B4718F26CD9A8700B652C3 /* Sources */ = {
@@ -282,6 +362,7 @@
 		};
 		E7B471A826CD9A8A00B652C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24AEEDA526332A1CC368655 /* Pods-LibEngineFlutter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +380,7 @@
 		};
 		E7B471A926CD9A8A00B652C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D4926997FF7D72587E580CB /* Pods-LibEngineFlutter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
